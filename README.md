@@ -81,14 +81,13 @@ model = Sequential([
 **Theory**: The CNN architecture consists of convolutional layers for feature extraction, max-pooling layers for dimensionality reduction, and fully connected layers for classification.\
 Conv2D(32, (3,3), activation='relu', input_shape=(28,28,1)):32 filters of size (3x3).**'ReLU'** activation function (helps with non-linearity).\
 input_shape=(28,28,1): Input is a 28x28 grayscale image.\
-MaxPooling2D((2,2)):\
-Reduces feature map size by taking the maximum value from a 2x2 region.\
+MaxPooling2D((2,2)): Reduces feature map size by taking the maximum value from a 2x2 region.\
 Conv2D(64, (3,3), activation='relu'): 64 filters of size (3x3).\
 MaxPooling2D((2,2)): Again, reduces feature map size.\
 Flatten(): Converts the 2D feature maps into a 1D vector.\
 Dense(128, activation='relu'):Fully connected layer with 128 neurons.\
 Dropout(0.5): Randomly drops 50% of neurons during training to reduce overfitting.\
-Dense(10, activation='softmax'): 10 neurons (for digits 0-9) with softmax activation to output probabilities.\
+Dense(10, activation='softmax'): 10 neurons (for digits 0-9) with softmax activation to output probabilities.
 
 ### Step 4: Compile the Model
 ```python
