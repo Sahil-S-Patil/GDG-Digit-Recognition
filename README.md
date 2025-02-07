@@ -55,6 +55,10 @@ y_train = to_categorical(y_train, 10)
 y_test = to_categorical(y_test, 10)
 ```
 **Theory**: The dataset is loaded, normalized (pixel values scaled to [0,1]), and reshaped for CNN input. Labels are converted to one-hot encoded format.
+The original dataset shape is (60000, 28, 28), but CNNs expect an additional channel dimension.
+-1: Automatically infers the batch size.
+28, 28: Image dimensions.
+1: Number of channels (grayscale images have one channel).
 
 ### Step 3: Build the CNN Model
 ```python
